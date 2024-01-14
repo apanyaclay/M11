@@ -37,7 +37,7 @@ export default{
         // Create New product
         async saveProduct(){
             try {
-                await axios.post("link Api", {
+                await axios.post("http://localhost:9999/api/products", {
                     product_name: this.productName,
                     product_price: this.productPrice,
                 })

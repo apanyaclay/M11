@@ -1,9 +1,9 @@
 import * as Vue from 'vue';
 import * as VueRouter from 'vue-router';
 import App from './App.vue'
-import Create from './components/ProductAdd.vue'
-import Edit from './components/ProductEdit.vue'
-import Index from './components/ProductList.vue'
+import Create from './components/UserAdd.vue'
+import Edit from './components/UserEdit.vue'
+import Index from './components/UserList.vue'
 
 // Vue.use(VueRouter)
 

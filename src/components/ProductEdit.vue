@@ -41,10 +41,10 @@ export default{
         // Get Product By Id
         async getProductById(){
             try {
-                const response = await axios.get("link API")
+                const response = await axios.get(`http://localhost:9999/api/products/${this.$route.params.id}`)
 
-                this.productName = response.data.response[0].product_name
-                this.productPrice = response.data.response[0].product_price
+                this.productName = response.data.response.product_name
+                this.productPrice = response.data.response.product_price
             } catch (err) {
                 console.log(err)
             }
@@ -53,7 +53,7 @@ export default{
         // Update product
         async updateProduct(){
             try {
-                await axios.post("link Api", {
+                await axios.put(`http://localhost:9999/api/products/${this.$route.params.id}`, {
                     product_name: this.productName,
                     product_price: this.productPrice,
                 })
